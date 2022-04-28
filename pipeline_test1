@@ -1,0 +1,22 @@
+pipeline {
+  agent any
+
+  stages {
+    stage('S01') {
+      steps {
+        echo 'S01'
+      }
+    }
+    stage('S02') {
+      steps {
+        echo 'S02'
+      }
+    }
+    stage('S03') {
+      steps {
+        snDevOpsChange()
+        echo '03'
+      }
+    }
+  }
+}
