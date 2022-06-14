@@ -14,5 +14,9 @@ $.each(contentArray, function(index, newLine) {
           }, index*5);
       });
       
+  var lineID = index;
+  var self = $(this);
+     
+      
     }, index*100);
 });
