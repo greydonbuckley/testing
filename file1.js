@@ -14,9 +14,8 @@ $.each(contentArray, function(index, newLine) {
           }, index*5);
       });
       
-  var lineID = index;
-  var self = $(this);
-     
+     //let's change some stuff
+     var myVar = "this is new";
       
     }, index*100);
 });
