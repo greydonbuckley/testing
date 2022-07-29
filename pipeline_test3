@@ -1,0 +1,42 @@
+pipeline {
+  agent any
+
+  stages {
+    stage('build') {
+      steps {
+        echo 'build step'
+      }
+    }
+    stage('test') {
+      steps {
+        echo 'test step'
+      }
+    }
+    stage('register') {
+      steps {
+        echo 'register step'
+        script {
+            stageName = 'Publish artifact to ServiceNow'
+            def applicationJar = "testing3.jar";
+            def packageName = "testing3";
+            snDevOpsArtifact(artifactsPayload: """{"artifacts": [{"name": "${applicationJar}", "version": "2.${env.BUILD_NUMBER}.0","semanticVersion": "1.0.0","repositoryName": "test3"}], "branchName": "master"}""")
+        }
+      }
+    }    
+    stage('deploy') {
+      steps {
+        snDevOpsChange()
+        //snDevOpsChange(changeRequestDetails:{attributes:[{assigned_to:1c797a6e87005150e28b642d0ebb3512}]})
+/*
+snDevOpsChange(changeRequestDetails: """
+{
+  "attributes": {
+    "assigned_to":"391b1cd987149110f53496873cbb3566"
+  }
+}""")
+*/
+        echo 'deploy step'
+      }
+    }
+  }
+}
