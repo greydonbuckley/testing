@@ -20,6 +20,7 @@ pipeline {
             def applicationJar = "testing3.jar";
             def packageName = "testing3";
             snDevOpsArtifact(artifactsPayload: """{"artifacts": [{"name": "${applicationJar}", "version": "2.${env.BUILD_NUMBER}.0","semanticVersion": "1.0.0","repositoryName": "test3"}], "branchName": "master"}""")
+            snDevOpsPackage(name: "${packageName}", artifactsPayload: """{"artifacts": [{"name": "${applicationJar}", "version": "2.${env.BUILD_NUMBER}.0","semanticVersion": "1.0.0","repositoryName": "test3"}], "branchName": "master"}""")
         }
       }
     }    
