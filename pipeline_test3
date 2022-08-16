@@ -28,7 +28,7 @@ pipeline {
       steps {
         snDevOpsChange()
         echo 'sleeping'
-        sleep 180
+        sleep 60
         echo 'done sleeping'
         //snDevOpsChange(changeRequestDetails:{attributes:[{assigned_to:1c797a6e87005150e28b642d0ebb3512}]})
 /*
