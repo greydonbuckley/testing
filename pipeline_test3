@@ -5,17 +5,11 @@ pipeline {
     stage('build') {
       steps {
         echo 'build step'
-        def buildSleep = params.BUILD_SLEEP_TIME
-        echo "Waiting ${BUILD_SLEEP_TIME}"
-        sleep buildSleep.toInteger() // seconds        
       }
     }
     stage('test') {
       steps {
         echo 'test step'
-        def testSleep = params.TEST_SLEEP_TIME
-        echo "Waiting ${TEST_SLEEP_TIME}"
-        sleep testSleep.toInteger() // seconds        
       }
     }
     stage('register') {
@@ -33,9 +27,7 @@ pipeline {
     stage('deploy') {
       steps {
         snDevOpsChange()
-        def deploySleep = params.DEPLOY_SLEEP_TIME
-        echo "Waiting ${DEPLOY_SLEEP_TIME}"
-        sleep deploySleep.toInteger() // seconds        
+        sleep 60        
         //snDevOpsChange(changeRequestDetails:{attributes:[{assigned_to:1c797a6e87005150e28b642d0ebb3512}]})
 /*
 snDevOpsChange(changeRequestDetails: """
