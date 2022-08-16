@@ -27,7 +27,9 @@ pipeline {
     stage('deploy') {
       steps {
         snDevOpsChange()
-        sleep 60        
+        echo 'sleeping'
+        sleep 60
+        echo 'done sleeping'
         //snDevOpsChange(changeRequestDetails:{attributes:[{assigned_to:1c797a6e87005150e28b642d0ebb3512}]})
 /*
 snDevOpsChange(changeRequestDetails: """
