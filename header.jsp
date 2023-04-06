@@ -39,7 +39,7 @@
                                     <a href="/about">About</a>
                                 </li>
                                 <li>
-                                    <a href="/jobs">Jobs</a>
+                                    <a href="/jobs">Careers</a>
                                 </li>
                                 <li>
                                     <a href="#">
@@ -51,6 +51,9 @@
                                         </li>
                                         <li>
                                             <a href="#">Secret Mountain</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Petaluma</a>
                                         </li>
                                     </ul>
                                 </li>
