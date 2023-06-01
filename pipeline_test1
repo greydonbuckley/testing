@@ -39,6 +39,62 @@ pipeline
             echo 'test_3 step'
           }
         }
+
+        stage('test_4')
+        {
+          steps
+          {
+            echo 'test_4 step'
+          }
+        }
+
+        stage('test_5')
+        {
+          steps
+          {
+            echo 'test_5 step'
+          }
+        }
+
+        stage('test_6')
+        {
+          steps
+          {
+            echo 'test_6 step'
+          }
+        }
+
+        stage('test_7')
+        {
+          steps
+          {
+            echo 'test_7 step'
+          }
+        }
+
+        stage('test_8')
+        {
+          steps
+          {
+            echo 'test_8 step'
+          }
+        }
+
+        stage('test_9')
+        {
+          steps
+          {
+            echo 'test_9 step'
+          }
+        }
+
+        stage('test_10')
+        {
+          steps
+          {
+            echo 'test_10 step'
+          }
+        }
       }
     }
 
