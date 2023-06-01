@@ -27,7 +27,7 @@ pipeline
         {
           steps
           {
-            cho 'test_2 step'
+            echo 'test_2 step'
           }
         }
 
