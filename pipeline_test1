@@ -15,8 +15,6 @@ pipeline
     {
       parallel
       {
-        echo 'test steps'
-
         stage('test_1')
         {
           steps
