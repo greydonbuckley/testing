@@ -27,7 +27,7 @@ pipeline
         {
           steps
           {
-            //snDevOpsChange()
+            snDevOpsChange()
             echo 'test_2 step'
           }
         }
