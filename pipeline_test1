@@ -1,21 +1,54 @@
-pipeline {
+pipeline
+{
   agent any
 
-  stages {
-    stage('S01') {
-      steps {
-        echo 'S01'
+  stages
+  {
+    stage('build')
+    {
+      steps
+      {
+        echo 'build step'
       }
     }
-    stage('S02') {
-      steps {
-        echo 'S02'
+    stage('test')
+    {
+      steps
+      {
+        echo 'test steps'
+
+        stage('test_1')
+        {
+          steps
+          {
+            echo 'test_1 step'
+          }
+        }
+
+        stage('test_2')
+        {
+          steps
+          {
+            cho 'test_2 step'
+          }
+        }
+
+        stage('test_3')
+        {
+          steps
+          {
+            echo 'test_3 step'
+          }
+        }
       }
     }
-    stage('S03') {
-      steps {
+
+    stage('deploy')
+    {
+      steps
+      {
         snDevOpsChange()
-        echo '03'
+        echo 'deploy step'
       }
     }
   }
