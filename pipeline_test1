@@ -13,7 +13,7 @@ pipeline
     }
     stage('test')
     {
-      steps
+      parallel
       {
         echo 'test steps'
 
