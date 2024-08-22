@@ -53,3 +53,5 @@ jobs:
           changeCreationTimeOut: '3600'
           abortOnChangeCreationFailure: false
           abortOnChangeStepTimeout: false
+      - name: Fail job
+        run: exit 1
